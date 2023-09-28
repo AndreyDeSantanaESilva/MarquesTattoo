@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --text-color: white;
+    --bg-url: url(./Img/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color:rgba(255, 255, 255, 0.1);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --higthligh-color: rgba(255, 255, 255, 0.2);
+    --switch-url: white url(./Img/moon-stars.svg) no-repeat center;;
+}
+.claro {
+    --text-color: black;
+    --bg-url: url(./Img/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color:rgba(0, 0, 0, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --higthligh-color: rgba(0, 0, 0, 0.05);
+    --switch-url: white url(./Img/sun.svg) no-repeat center;
+}
+.fundo {
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+}
+body *{
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}  
+#container{
+        width: 100%;
+        border-radius: 70px;
+        margin: 56px auto 0px; 
+        max-width: 580px;
+}
+#profile {
+    padding: 10px;
+    text-align: center;
+}
+#profile img {
+    width: 112px;
+}
+#profile p {
+    font-size: 16px; /*Font-size de 16px é padrão*/
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+/* Link switch*/
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+#switch button {
+    width: 32px;
+    height: 33.4px;
+    background: var(--switch-url);
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    align-items: center;
+    z-index: 1;
+    left: 1.2px;   
+    transform: translateY(09%);
+    animation: slide-back 0.6s forwards;
+}
+.claro #switch button {
+    animation: slide-in 0.4s forwards;
+}
+#switch span {
+    display: block;
+    width: 64px;
+    height: 40px;
+    background: var(--surface-color-hover);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+#switch button:hover {
+    outline: 8px solid var(--higthligh-color);
+}
+/* Link das listas*/
+.lista {
+    padding: 8px 40% 0px;
+    margin: 10px;
+    box-sizing: border-box;
+    font-size: 80%;
+}
+ul {
+    list-style: none;
+    flex-direction: column;
+    gap: 16px;
+    display: flex;
+    padding: 24px 0;    
+}
+ul li a {
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    border-radius: 8px;
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding:  16px 24px;
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition:  0.2s;
+}
+ul li a:hover {
+    border: 1px solid var(--text-color);
+    background: var(--surface-color-hover);
+}
+/* Link das redes sociais*/
+#social{
+    display: flex;
+    padding: 24px 0;
+    font-size: 24px;
+    justify-content: center; 
+}
+#social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+#social a:hover {
+    background: var(--higthligh-color);
+    padding: 16px;
+}
+/* rodape */
+footer {
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+/* Lista de contatos */
+.contato  {
+    padding: 8px 40% 0px;
+    margin: 10px;
+}
+.contato p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    border-radius: 50px;
+    height: 170px;
+    display: flex;
+    text-align: center;
+    padding:  16px 24px;
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1em;
+}
+/* media queries - alterar a imagem de fundo de acordo com o tamanho da pagina */
+@media (min-width: 700px) {
+    :root{
+        --bg-url: url(./Img/bg-desktop.jpg);
+        
+    }
+    .claro {
+        --bg-url: url(./Img/bg-desktop-light.jpg);
+    }
+}
+/* Animação do botao de claro e escuro*/
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+}

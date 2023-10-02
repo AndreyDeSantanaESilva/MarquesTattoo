@@ -193,3 +193,21 @@ footer {
         left: 0;
     }
 }
+
+@media (max-width: 770px) {
+    .contato {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        flex-direction: column;
+        padding: 4rem 0;
+        border: 1px solid var(--stroke-color);
+        border-radius: 50px;
+        height: 170px;
+        display: flex;
+        text-align: center;
+        padding:  16px 24px;
+        text-decoration: none;
+        font-size: 09px;
+        font-weight: 400;
+        line-height: 1em;
+    }
+}

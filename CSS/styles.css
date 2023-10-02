@@ -195,18 +195,21 @@ footer {
 }
 
 @media (max-width: 770px) {
-    .contato {
+    .contato p {
         font-family: Georgia, 'Times New Roman', Times, serif;
         flex-direction: column;
-        padding: 4rem 0;
+        padding: 8rem;
         border: 1px solid var(--stroke-color);
+        background: var(--surface-color);
         border-radius: 50px;
+        background-position: center;
         height: 170px;
         display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding:  16px 24px;
+        font-size: 1em;
         text-decoration: none;
-        font-size: 09px;
         font-weight: 400;
         line-height: 1em;
     }

@@ -207,5 +207,21 @@ footer {
         width: 100%;
         border: 1px solid var(--stroke-color);
         background: var(--surface-color);
+        font-weight: 400;
     }
+    .lista {
+        padding: 4px 20% 0px;
+        margin: 0;
+    }   
+    li a {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid var(--stroke-color);
+        background: var(--surface-color);
+        font-size: large;
+        font-weight: 400;
+   }
 }
